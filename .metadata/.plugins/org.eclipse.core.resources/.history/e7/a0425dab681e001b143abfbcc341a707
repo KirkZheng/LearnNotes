@@ -1,0 +1,15 @@
+package com.kk.test;
+
+public class HelloWworld {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int a=100;
+		int b=200;
+		int c=200;
+		System.out.println(a==b);
+		String y="A";
+		String s="A";
+		System.out.println(y=S);
+	}
+}

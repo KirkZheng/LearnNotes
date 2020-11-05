@@ -31,7 +31,7 @@ public class Demo2 {
 			System.out.println("星期日");
 			break;
 		default: 
-			System.out.println("输入有误，程序终止！！！");
+			System.out.println("输入有误，程序终止！");
 		}
 		
 	}

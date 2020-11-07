@@ -1,0 +1,17 @@
+package com.kk.homework;
+import java.util.Scanner;
+
+public class Case3 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc=new Scanner(System.in);
+		System.out.println("请输入一个成绩：");
+		int sorce=sc.nextInt();
+		do{
+			System.out.println("成绩不合格！！");
+			System.out.println(sorce);
+		}while(sorce<60);
+	}
+
+}

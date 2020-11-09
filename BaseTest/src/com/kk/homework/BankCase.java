@@ -1,5 +1,5 @@
 package com.kk.homework;
-import java.util.Scanner;
+import java.util.Scanner;//导包
 
 public class BankCase {
 
@@ -16,21 +16,20 @@ public class BankCase {
 		 * 7.初始金额5000，账户余额不能小于1元
 		 * 8.记录取款次数，循环提示取钱，直到余额等于1
 		 */
-		String zh="1234567890123456789";
-		String mm="123456";
+		String zh="1";
+		String mm="1";
 		String i;
 		String j;
 		int count=3;//定义计数器并赋值3，记录输入账号密码的次数，3次
 		int count2=0;//定义计数器2，记录取钱的次数
 		int yu=5000; //定义一个初始余额
 		System.out.println("\n"+"\n");
-		System.out.println("----------------欢迎来到XX银行------------"+"\n");
-		
+		System.out.println("\t"+"--------------欢迎来到XX银行------------"+"\n");
 		
 		
 		//登录模块
 		do{ 
-			Scanner sc=new Scanner(System.in);
+			Scanner sc=new Scanner(System.in);	//提示用户键盘输入
 			System.out.println("请输入你的账号：");
 		    i=sc.next();
 		    System.out.println("请输入你的密码：");
@@ -39,29 +38,36 @@ public class BankCase {
 		    	count--;//输错账号密码一次就减一次输入的机会
 		    	if(count==0) {//如果超过三次就锁定账号
 		    		System.out.println("\n"+"\n"+"\n");
-		    		System.out.println("-------------账户被锁定！！！-----------");
-		    		System.out.println("-------------账户被锁定！！！-----------");
-		    		System.out.println("-------------账户被锁定！！！-----------");
+		    		System.out.println("\t"+"-------------------账户被锁定！！！--------------------");
+		    		System.out.println("\t"+"-------------------账户被锁定！！！--------------------");
+		    		System.out.println("\t"+"-------------------账户被锁定！！！--------------------");
 		    		break;
 		    	}
 		    	System.out.println("账号密码输入错误！！！请重新输入："+"\n");
 		    	System.out.println("------------你还有"+count+"次机会！--------");
-		    	System.out.println("\n"+"\n"+"\n");
+		    	System.out.println("\n"+"\n");
 		    	
 		    	
 		    	
 		    	//登陆成功后关于取钱的功能模块
 		    }else {
-		    	System.out.println("登录成功！你的账户共有5000元！！！"+"\n");
-		    	for(int k=0; k<=100; k++) {//初始化取钱次数100次
-		    		System.out.println("请输入你的取款金额：");
+		    	System.out.println("登录成功！你的账户共有5000元，账户需要保留1元钱。"+"\n");
+		    	for(;;) {//初始化取钱次数100次
+		    		System.out.println("请输入取款金额：");
 		    		int qk=sc.nextInt();
+		    		/*如果用户输入的不是数字，会抛出异常
+		    		 * 如何满足如果出现异常，提示用户重新输入数字这个需求？？？
+		    		*/
 		    		count2++;//记录每次取钱的次数
-		    	if(qk<0) {
+		    		int x=yu-qk;
+		    	if(yu==0){
+			    	System.out.println("你已破产！！！");
+			    	break;
+			    }if(qk<0) {//取款金额不能小于0元
 		    		System.out.println("输入有误，取款金额不能小于0！");
-		    	}if(yu<=1 || qk>yu) {//余额不能小于1并且取款不能大于余额
-		    		//这里有一个问题，我已经加了判断语句，余额仍然可以小于1或者等于1？？？？
-		    		System.out.println("你的余额不足！请重新输入");
+		    		continue;
+		    	}if(qk>x && x<1) {//取款不能大于余额
+		    		System.out.println("余额不足！请重新输入：");
 		    	}else {
 		    		yu=yu-qk;//余额等于现有余额减去每次取钱数
 		    		System.out.println("你的账户还有"+yu+"元");
@@ -69,9 +75,8 @@ public class BankCase {
 		    		continue;//只要还有余额，就继续提示进行取款
 		    		}
 		    	}
-		    	
 		    }
-		}while(!i.equals(zh) || !j.equals(mm));	
+		}while(!i.equals(zh) || !j.equals(mm));	//匹配用户输入的字符是否与默认的字符匹配
 	}
 
 }

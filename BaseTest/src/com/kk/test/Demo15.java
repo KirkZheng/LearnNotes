@@ -1,22 +1,28 @@
 package com.kk.test;
-
-import com.sun.org.apache.xpath.internal.objects.XString;
-/*
-阶乘的简单使用
- */
+import java.lang.reflect.Array;
 
 public class Demo15 {
 
 	public static void main(String[] args) {
-				for (int counter = 0; counter <= 10; counter++){
-					System.out.printf("%d! = %d\n", counter,
-							factorial(counter));
+		int[] array = {12, 3, 34, 53};
+		System.out.println("遍历所有数组");
+		for (int i = 0; i < array.length; i++) {
+			System.out.print(array[i] + "   ");
+		}
+		int sum = 0;
+
+		for (int i = 0; i < array.length; i++) {
+			sum += array[i];
+		}
+		System.out.println();
+		System.out.println("所有元素之和是" + sum);
+		int max = array[0];
+		for (int i = 1; i < array.length; i++) {
+			if (array[i] > max) {
+				max = array[i];
 				}
 			}
-			public static long factorial(long number) {
-				if (number <= 1)
-					return 1;
-				else
-					return number * factorial(number - 1);
-			}
-}
+		System.out.println("最大值是：" + max);
+		}
+	}
+

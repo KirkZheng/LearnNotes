@@ -1,6 +1,10 @@
 package com.kk.homework;
 import java.util.Scanner;//导包
 
+/**
+@author kz96
+ */
+
 public class BankCase {
 
 	public static void main(String[] args) {
@@ -20,23 +24,30 @@ public class BankCase {
 		String mm="1";
 		String i;
 		String j;
-		int count=3;//定义计数器并赋值3，记录输入账号密码的次数，3次
-		int count2=0;//定义计数器2，记录取钱的次数
-		int yu=5000; //定义一个初始余额
+		int count=3;
+		//定义计数器并赋值3，记录输入账号密码的次数，3次
+		int count2=0;
+		//定义计数器2，记录取钱的次数
+		int yu=5000;
+		//定义一个初始余额
 		System.out.println("\n"+"\n");
 		System.out.println("\t"+"--------------欢迎来到XX银行------------"+"\n");
 		
 		
 		//登录模块
 		do{ 
-			Scanner sc=new Scanner(System.in);	//提示用户键盘输入
+			Scanner sc=new Scanner(System.in);
+			//提示用户键盘输入
 			System.out.println("请输入你的账号：");
 		    i=sc.next();
 		    System.out.println("请输入你的密码：");
 		    j=sc.next();
-		    if(!i.equals(zh) || !j.equals(mm)) {//匹配账号密码是否正确
-		    	count--;//输错账号密码一次就减一次输入的机会
-		    	if(count==0) {//如果超过三次就锁定账号
+		    if(!i.equals(zh) || !j.equals(mm)) {
+		    	//匹配账号密码是否正确
+		    	count--;
+		    	//输错账号密码一次就减一次输入的机会
+		    	if(count==0) {
+		    		//如果超过三次就锁定账号
 		    		System.out.println("\n"+"\n"+"\n");
 		    		System.out.println("\t"+"-------------------账户被锁定！！！--------------------");
 		    		System.out.println("\t"+"-------------------账户被锁定！！！--------------------");
@@ -63,20 +74,25 @@ public class BankCase {
 		    	if(yu==0){
 			    	System.out.println("你已破产！！！");
 			    	break;
-			    }if(qk<0) {//取款金额不能小于0元
+			    }if(qk<0) {
+		    		//取款金额不能小于0元
 		    		System.out.println("输入有误，取款金额不能小于0！");
 		    		continue;
-		    	}if(qk>x && x<1) {//取款不能大于余额
+		    	}if(qk>x && x<1) {
+		    		//取款不能大于余额
 		    		System.out.println("余额不足！请重新输入：");
 		    	}else {
-		    		yu=yu-qk;//余额等于现有余额减去每次取钱数
+		    		yu=yu-qk;
+		    		//余额等于现有余额减去每次取钱数
 		    		System.out.println("你的账户还有"+yu+"元");
-		    		System.out.println("第"+count2+"次取款"+"\n");//输出取款次数
+		    		System.out.println("第"+count2+"次取款"+"\n");
+		    		//输出取款次数
 		    		continue;//只要还有余额，就继续提示进行取款
 		    		}
 		    	}
 		    }
-		}while(!i.equals(zh) || !j.equals(mm));	//匹配用户输入的字符是否与默认的字符匹配
+		}while(!i.equals(zh) || !j.equals(mm));
+		//匹配用户输入的字符是否与默认的字符匹配
 	}
 
 }

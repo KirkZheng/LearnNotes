@@ -14,7 +14,6 @@ public class Demo16 {
 
 
 
-
         //2、使用3中方式创建整数数组，长度为5。
         int[] x={1,2,3,4};
         int[] y=new int[]{1,2,3,4,5};
@@ -32,7 +31,6 @@ public class Demo16 {
 //            }
 //        }
 //        System.out.print("成绩最大的是"+max);
-
 
 
 

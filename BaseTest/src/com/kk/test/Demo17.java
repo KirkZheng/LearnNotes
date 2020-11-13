@@ -1,6 +1,6 @@
 package com.kk.test;
 
-import jdk.internal.dynalink.beans.StaticClass;
+import java.util.Scanner;
 
 public class Demo17 {
     //5、1个班5人java成绩，创建方法，参数为数组，计算平均分，然后所有学员50分以下+10分，50分以上的加5分，并将结果数组返回，接受后输出

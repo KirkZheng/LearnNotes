@@ -17,18 +17,20 @@ public class GuessNumber {
         while (true){
             //键盘录入要猜的数
             Scanner sc = new Scanner(System.in);
-            System.out.println("请输入你要猜的数：");
+            System.out.println("请输入"+min+"到"+max+"之间的数");
             int guessNum = sc.nextInt();
+            System.out.println("随机数是："+num);
+            System.out.println();
             if(guessNum>100 || guessNum<1){
         		System.out.println("你的输入有误！！！");
         	}else if(guessNum>num) {
                 System.out.println("猜大了");
                 max=guessNum;
-                System.out.println("请输入"+min+"到"+max+"之间的数");
+                System.out.println();
             		}else if (guessNum<num) {
             			System.out.println("猜小了");
-            			min=guessNum;
-            			System.out.println("请输入"+min+"到"+max+"之间的数");
+            			min=guessNum;         			
+            			System.out.println();
             	}else {
             		System.out.println("猜对了");
             		break;

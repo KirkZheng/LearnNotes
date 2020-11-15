@@ -5,7 +5,7 @@ import java.util.Scanner;//导包
 @author kz96
  */
 
-public class BankCase {
+public class BankSystem {
 
 	public static void main(String[] args) {
 		//模拟银行取款

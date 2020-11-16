@@ -30,6 +30,7 @@ public class StudentAdmin {
 	                break;
 	            case "4":
 	                tag = false;
+	                System.out.println("成功退出系统");
 	                break;
 	            default:
 	            	System.out.println("输入错误!!!请按提示输入："+"\n");
@@ -45,10 +46,12 @@ public class StudentAdmin {
 	            System.out.println("请依次输入姓名，电话");
 	            stu[num].setStuName(scan.next());           
 	            stu[num].setNum(scan.next());
+	            //如何添加判断如果电话相同，就提示已经有“相同的号码”，让他重新输入
 	            num++;
 	            break;
 
 	        }
+	        
 	        System.out.println("当前学生信息：");
 	        cha();
 	        
@@ -57,12 +60,14 @@ public class StudentAdmin {
 
 	    static boolean del = false;
 
+	    
+	    //这里有个很大的问题，删除方法没有效果
 	    static void delete() { // 删除学生信息
-	        System.out.println("请输入你要删除的学生名");
-	        String xuehao = scan.next();
+	        System.out.println("请输入你要删除的学生电话");
+	        String phone = scan.next();
 	        int i;
 	        for (i = 0; i < num; i++) {
-	            if (xuehao.equals(stu[i].getStuName())) {
+	            if (phone.equals(stu[i].getNum())) {
 	                del = true;
 	                break;
 	            }

@@ -3,9 +3,8 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class GuessNumber {
-    static void main(String[] args) {
-        
-        
+    static void main(String[] args) {   
+       
     }
     
     public void game() {

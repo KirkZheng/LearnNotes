@@ -1,4 +1,6 @@
-package com.kk.test.obj;
+package com.kk.homework.obj;
+
+import com.kk.test.obj.Plant;
 
 public class Bean extends Plant{
 	//创建子类豌豆并集成父类植物

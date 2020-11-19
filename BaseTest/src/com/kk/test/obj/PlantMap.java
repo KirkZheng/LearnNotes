@@ -1,5 +1,7 @@
 package com.kk.test.obj;
 
+import com.kk.homework.obj.Bean;
+
 public class PlantMap {
 	//初始阳光值
 	private int sun=1000;

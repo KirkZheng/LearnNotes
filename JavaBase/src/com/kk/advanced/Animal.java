@@ -1,4 +1,4 @@
-package com.kk.base;
+package com.kk.advanced;
 
 public class Animal {
 	//创建父类，定义属性

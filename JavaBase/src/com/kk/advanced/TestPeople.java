@@ -1,4 +1,4 @@
-package com.kk.base;
+package com.kk.advanced;
 
 public class TestPeople {
 	public static void main(String[] args) {

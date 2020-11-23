@@ -1,4 +1,4 @@
-package com.kk.base;
+package com.kk.advanced;
 
 public interface Play {
 	//创建接口和接口方法

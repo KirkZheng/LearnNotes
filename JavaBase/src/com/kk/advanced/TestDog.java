@@ -1,4 +1,4 @@
-package com.kk.base;
+package com.kk.advanced;
 
 public class TestDog {
 	public static void main(String[] args) {

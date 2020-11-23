@@ -1,4 +1,4 @@
-package com.kk.base;
+package com.kk.advanced;
 
 public class StaticCode{
 	//定义静态变量

@@ -1,4 +1,4 @@
-package com.kk.base;
+package com.kk.advanced;
 
 
 //创建学生类，定义属性

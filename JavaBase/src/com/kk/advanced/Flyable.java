@@ -1,4 +1,4 @@
-package com.kk.base;
+package com.kk.advanced;
 
 public interface Flyable {
 	//创建接口

@@ -1,6 +1,4 @@
-package com.kk.base;
-
-import com.kk.base.Composition;
+package com.kk.advanced;
 
 public class People implements Flyable,Composition {
 	private String name;

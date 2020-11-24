@@ -20,10 +20,10 @@ public class People implements Flyable,Composition {
 
 	
 	public void eat() {
-		System.out.println("吃");
+		System.out.println("喜欢吃");
 	}
 	public void sleep() {
-		System.out.println("睡");
+		System.out.println("喜欢睡");
 	}
 	public void Attributes() {
 		System.out.println("人类由男人女人组成");

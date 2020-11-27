@@ -24,7 +24,7 @@ public class Worker {
 	}
 	//创建无参构造方法
 	public Worker() {
-		
+		super();
 	}
 	
 	//创建getset方法

@@ -21,7 +21,7 @@ public class Student {
 	}
 	//无参构造方法
 	public Student() {
-		
+		super();
 	}
 	public String getName() {
 		return name;

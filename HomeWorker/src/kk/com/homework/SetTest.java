@@ -1,10 +1,10 @@
-package com.kk.advanced;
+package kk.com.homework;
 
 import java.util.Collection;
 import java.util.ArrayList;
 import java.util.Iterator;
 
-public class Set {
+public class SetTest {
 	@SuppressWarnings("unchecked")
 	public static void main(String[] args) {
 		//ctrl +shift +o 

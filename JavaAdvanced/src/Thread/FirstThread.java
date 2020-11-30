@@ -9,8 +9,15 @@ public class FirstThread extends Thread{
 	//创建线程方法
 	public void run() {
 		//输出线程名字和线程ID
-		for(int i=0;i<10;i++) {
-		System.out.println("线程ID是："+Thread.currentThread().getId()+"线程名字是："+Thread.currentThread().getName()+i);
+		for(int i=1;i<=100;i++) {
+			System.out.println("         我好中意你，靓女!		");
+			System.out.println();
+			System.out.println();
+			try{
+				Thread.sleep(5000);
+			}catch(InterruptedException e) {
+				e.printStackTrace();
+			}
 		}
 	}
 	public FirstThread() {

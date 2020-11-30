@@ -21,6 +21,7 @@ public class Course {
 		maps.put(2,"数学");
 		maps.put(3,"英语");
 		Scanner input=new Scanner(System.in);
+		while(true) {
 		try {
 		System.out.println("请输入你要选择的课程：1.语文 2.数学 3.英语");
 		Integer choose=input.nextInt();
@@ -38,9 +39,11 @@ public class Course {
 			}
 		}catch(InputMismatchException e) {
 			System.out.println("输入的不是数字！");
+			break;
 		}finally {
 			System.out.println("欢迎光临！");
 		}
+	}
 			}
 		}
 	

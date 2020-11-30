@@ -6,7 +6,6 @@ public class Test {
 		FirstThread ft=new FirstThread();
 		//启动线程
 		ft.start();
-		ft.run();
 		//调用子类方法
 	}
 }
